@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import LogoImage from "../../../assets/logo.png";
+
+import LogoImage from '../../../assets/home/icons/logo.svg'
 import { Link, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Header } from "antd/es/layout/layout";
@@ -8,8 +9,8 @@ const Navbar = () => {
   const [activeNavbar, setActiveNavbar] = useState("home");
   const navigate = useNavigate();
   return (
-    <Header className="bg-white shadow-sm sticky top-0 z-50 px-4">
-      <Row align={"middle"} justify={"space-between container mx-auto h-full"}>
+    <Header className=" fixed shadow-sm w-full bg-transparent top-0 z-50 px-4 backdrop-blur-md">
+      <Row justify={'space-around'} className={' flex-grow items-center font-bold'}>
         <Col className="flex items-center">
           <ScrollLink
             spy={true}
@@ -26,41 +27,84 @@ const Navbar = () => {
           <Menu
             selectedKeys={activeNavbar}
             mode="horizontal"
-            className="flex-grow flex justify-center "
+            className=" flex flex-grow justify-center bg-transparent "
             items={[
               {
-                key: "home",
+                key: "buy-crypto",
                 label: (
                   <ScrollLink
                     spy={true}
                     smooth={true}
-                    to="home"
+                    to="buy-crypto"
                     duration={500}
                     offset={-72}
-                    onClick={() => setActiveNavbar("home")}
+                    onClick={() => setActiveNavbar("buy-crypto")}
                   >
-                    Home
+                      Buy Crypto
                   </ScrollLink>
                 ),
               },
               {
-                key: "solution",
+                key: "features",
                 label: (
                   <ScrollLink
                     spy={true}
                     smooth={true}
-                    to="solution"
+                    to="features"
                     duration={500}
-                    onClick={() => setActiveNavbar("solution")}
+                    onClick={() => setActiveNavbar("features")}
                   >
-                    Solution
+                      Features
                   </ScrollLink>
                 ),
               },
-              { key: "2", label: "Cooporate" },
-              { key: "3", label: "Fee" },
-              { key: "4", label: "About" },
-              { key: "5", label: "Contact" },
+
+                {
+                    key: "feature",
+                    label: (
+                        <ScrollLink
+                            spy={true}
+                            smooth={true}
+                            to="feature"
+                            duration={500}
+                            onClick={() => setActiveNavbar("feature")}
+                        >
+                            Feature
+                        </ScrollLink>
+                    ),
+                },
+
+
+                {
+                    key: "about-us",
+                    label: (
+                        <ScrollLink
+                            spy={true}
+                            smooth={true}
+                            to="about-us"
+                            duration={500}
+                            onClick={() => setActiveNavbar("about-us")}
+                        >
+                            About us
+                        </ScrollLink>
+                    ),
+                },
+
+                {
+                    key: "testimonials",
+                    label: (
+                        <ScrollLink
+                            spy={true}
+                            smooth={true}
+                            to="testimonials"
+                            duration={500}
+                            onClick={() => setActiveNavbar("testimonials")}
+                        >
+                            Testimonials
+                        </ScrollLink>
+                    ),
+                },
+
             ]}
           />
         </Col>
@@ -99,10 +143,10 @@ const Navbar = () => {
             ]}
           /> */}
           <Button
-            className="border-[#c51f4d]"
+            className="border-[#000] px-[24px] rounded-[80px] hover:bg-purple-600 hover:text-[#fff]"
             onClick={() => navigate("/auth/login")}
           >
-            Cabinet
+              Buy for $24
           </Button>
           <Button
             className="border-[#c51f4d] md:hidden"

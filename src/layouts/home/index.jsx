@@ -6,12 +6,14 @@ import { Layout } from "antd";
 
 const Index = () => {
   return (
-    <Layout>
-      <Navbar />
-      <Content>
-        <Outlet />
-      </Content>
-    </Layout>
+
+        <div className={'container mx-auto'}>
+            <Navbar />
+
+            <Outlet />
+
+        </div>
+
   );
 };
 
