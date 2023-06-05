@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import LogoImage from '../../../assets/home/icons/logo.svg'
+import LogoImage from "../../../assets/home/icons/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Header } from "antd/es/layout/layout";
@@ -9,8 +9,11 @@ const Navbar = () => {
   const [activeNavbar, setActiveNavbar] = useState("home");
   const navigate = useNavigate();
   return (
-    <Header className=" fixed shadow-sm w-full bg-transparent top-0 z-50 px-4 backdrop-blur-md">
-      <Row justify={'space-around'} className={' flex-grow items-center font-bold'}>
+    <Header className="sticky shadow-sm w-full bg-transparent top-0 z-50 px-4 backdrop-blur-md">
+      <Row
+        justify={"space-around"}
+        className={" flex-grow items-center font-bold"}
+      >
         <Col className="flex items-center">
           <ScrollLink
             spy={true}
@@ -40,7 +43,7 @@ const Navbar = () => {
                     offset={-72}
                     onClick={() => setActiveNavbar("buy-crypto")}
                   >
-                      Buy Crypto
+                    Buy Crypto
                   </ScrollLink>
                 ),
               },
@@ -54,57 +57,55 @@ const Navbar = () => {
                     duration={500}
                     onClick={() => setActiveNavbar("features")}
                   >
-                      Features
+                    Features
                   </ScrollLink>
                 ),
               },
 
-                {
-                    key: "feature",
-                    label: (
-                        <ScrollLink
-                            spy={true}
-                            smooth={true}
-                            to="feature"
-                            duration={500}
-                            onClick={() => setActiveNavbar("feature")}
-                        >
-                            Feature
-                        </ScrollLink>
-                    ),
-                },
+              {
+                key: "feature",
+                label: (
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    to="feature"
+                    duration={500}
+                    onClick={() => setActiveNavbar("feature")}
+                  >
+                    Feature
+                  </ScrollLink>
+                ),
+              },
 
+              {
+                key: "about-us",
+                label: (
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    to="about-us"
+                    duration={500}
+                    onClick={() => setActiveNavbar("about-us")}
+                  >
+                    About us
+                  </ScrollLink>
+                ),
+              },
 
-                {
-                    key: "about-us",
-                    label: (
-                        <ScrollLink
-                            spy={true}
-                            smooth={true}
-                            to="about-us"
-                            duration={500}
-                            onClick={() => setActiveNavbar("about-us")}
-                        >
-                            About us
-                        </ScrollLink>
-                    ),
-                },
-
-                {
-                    key: "testimonials",
-                    label: (
-                        <ScrollLink
-                            spy={true}
-                            smooth={true}
-                            to="testimonials"
-                            duration={500}
-                            onClick={() => setActiveNavbar("testimonials")}
-                        >
-                            Testimonials
-                        </ScrollLink>
-                    ),
-                },
-
+              {
+                key: "testimonials",
+                label: (
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    to="testimonials"
+                    duration={500}
+                    onClick={() => setActiveNavbar("testimonials")}
+                  >
+                    Testimonials
+                  </ScrollLink>
+                ),
+              },
             ]}
           />
         </Col>
@@ -146,7 +147,7 @@ const Navbar = () => {
             className="border-[#000] px-[24px] rounded-[80px] hover:bg-purple-600 hover:text-[#fff]"
             onClick={() => navigate("/auth/login")}
           >
-              Buy for $24
+            Buy for $24
           </Button>
           <Button
             className="border-[#c51f4d] md:hidden"
