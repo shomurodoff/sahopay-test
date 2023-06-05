@@ -273,8 +273,8 @@ const Features = () => {
           <p className={'text-[#979797] text-lg '}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br/> tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim.</p>
         </div>
 
-        <div className={'col-span-12 flex justify-between flex-wrap '}>
-          <div className={'col-span-4 w-[400px]'}>
+        <div className={'col-span-12 flex justify-between flex-wrap w-[1200px] mx-auto'}>
+          <div className={'col-span-4 '}>
             <div className={'absolute'}>
               <Lottie
                   options={defaultOptionsThreeArrow}
@@ -290,7 +290,7 @@ const Features = () => {
 
           </div>
 
-          <div className={'col-span-4 w-[400px]'}>
+          <div className={'col-span-4 '}>
             <div className={'absolute'}>
               <Lottie
                   options={defaultOptions}
@@ -306,7 +306,7 @@ const Features = () => {
 
           </div>
 
-          <div className={'col-span-4 w-[400px]'}>
+          <div className={'col-span-4 '}>
             <div className={'absolute'}>
               <Lottie
                   options={defaultOptionsCheckedData}

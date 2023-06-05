@@ -31,7 +31,7 @@ const featureSection = () => {
                     <img src={CardImg1} className={'w-[350px]'}/>
                 </div>
 
-                <div className={'col-span-7 flex flex-col gap-y-[50px]'}>
+                <div className={'col-span-7 flex flex-col gap-y-[60px]'}>
                         <div className={'flex items-center rounded-[20px] bg-[#fff] gap-x-[100px]  border max-w-[700px] h-[250px] px-[40px] relative overflow-hidden'}>
                             <div className={'flex flex-col pt-[10px]'}>
                                 <h2 className={'text-3xl font-bold'}>Two-Factor <br/> Authentication</h2>

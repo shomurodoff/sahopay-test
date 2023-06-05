@@ -3,6 +3,7 @@ import HomeSection from "./sections/home-section";
 import SolutionSection from "./sections/features-section";
 import FeatureSection from "./sections/feature-section";
 import AboutSection from "./sections/about-section";
+import TestimonialsSection from "./sections/testimonials-section";
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       <SolutionSection />
         <FeatureSection/>
         <AboutSection/>
+        <TestimonialsSection/>
     </div>
   );
 };

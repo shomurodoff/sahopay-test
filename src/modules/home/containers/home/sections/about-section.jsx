@@ -77,7 +77,7 @@ const AboutSection = ()=> {
             </div>
 
 
-            <div className={'flex justify-center flex-start items-center gap-x-[200px] bg-[#EDF7FA] py-[70px] w-[1200px] mx-auto rounded-[20px] mb-[60px]'}>
+            <div className={'flex justify-center flex-start items-center gap-x-[200px] bg-[#EDF7FA] py-[70px] w-[1200px] mx-auto rounded-[20px] mb-[120px]'}>
                 <div>
                     <h1 className={'text-5xl font-bold'}>Fast buy and sell</h1>
                     <p className={'text-base font-light my-[30px]'}>

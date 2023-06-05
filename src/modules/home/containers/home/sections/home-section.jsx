@@ -19,7 +19,7 @@ const HomeSection = () => {
   return (
     <Element
       name="buy-crypto"
-      className=" h-[calc(100vh-64px)] pt-[64px] relative flex flex-col justify-center items-center bg-no-repeat bg-cover bg-center "
+      className=" h-[calc(100vh-64px)] pt-[64px] relative flex flex-col justify-center items-center bg-no-repeat bg-cover bg-center  "
       style={{
         backgroundImage: `url(${HeroBg})`,
       }}
@@ -41,8 +41,6 @@ const HomeSection = () => {
         <div className={'col-span-6 justify-self-center relative'}>
 
           <img src={HeaderContentImg} width={300}  className={'relative top-0 z-10'}/>
-
-
           <img src={MasterCardFront} width={280}  className={'absolute top-[350px] left-[-90px] z-30 '}/>
           <img src={CoinCash} width={300} className={'absolute top-[270px] left-0 right-0 z-20'} />
           <img src={MasterCardBack}  width={280} className={'absolute top-[130px] left-[100px] '} />
