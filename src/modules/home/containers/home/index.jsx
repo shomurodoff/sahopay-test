@@ -9,8 +9,8 @@ const Index = () => {
     <div>
       <HomeSection />
       <SolutionSection />
-        <FeatureSection/>
-        <AboutSection/>
+      <FeatureSection />
+      <AboutSection />
     </div>
   );
 };
