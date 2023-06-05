@@ -1,19 +1,15 @@
 import React from "react";
 import Navbar from "./components/navbar";
 import { Outlet } from "react-router-dom";
-import { Content } from "antd/es/layout/layout";
-import { Layout } from "antd";
+import { useInView } from "react-intersection-observer";
 
 const Index = () => {
+  const [headerSectionRef, headerSectionInView] = useInView({ threshold: 0 });
   return (
-
-        <div className={'container mx-auto'}>
-            <Navbar />
-
-            <Outlet />
-
-        </div>
-
+    <div className={"container mx-auto shadow-xl"}>
+      <Navbar headerSectionInView={headerSectionInView} />
+      <Outlet context={[headerSectionRef]} />
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Form, Button, Input, Card, Typography, Row } from "antd";
+import { Form, Button, Input, Card } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { get } from "lodash";
@@ -11,43 +11,7 @@ const Index = () => {
   };
   return (
     <div className="flex-grow flex justify-center ">
-      <Card
-        className="w-11/12 md:w-1/4"
-        title={
-          <Row align={"middle"} justify={"space-between"}>
-            <Typography.Title
-              level={4}
-              style={{
-                marginBottom: 0,
-              }}
-            >
-              Login to Sahopay
-            </Typography.Title>
-            <Button
-              onClick={() => {
-                navigate("/");
-              }}
-              shape="circle"
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              }
-            />
-          </Row>
-        }
-      >
+      <Card className="w-11/12 md:w-1/4">
         <Form
           name="basic"
           layout="vertical"
@@ -57,10 +21,17 @@ const Index = () => {
           autoComplete="off"
           onFinish={onSubmit}
         >
+          <div className="text-center mb-5">
+            <h2 className="text-2xl font-bold">Forgot Password</h2>
+            <h3 className="text-md text-[#333]">
+              Enter the email that you used when register to recover your
+              password. You will receive 6 digits number
+            </h3>
+          </div>
           <Form.Item
             label="Email"
             name="email"
-            className="mb-14"
+            className="mb-8"
             rules={[
               {
                 required: true,
@@ -73,36 +44,33 @@ const Index = () => {
           <Form.Item>
             <Button
               type="primary"
-              className="bg-[#c51f4d] w-full"
+              className="bg-[#b937de] w-full mb-2"
               htmlType="submit"
             >
-              Send Request
+              Send
             </Button>
-          </Form.Item>
-          <Form.Item>
             <Button
-              type="ghost"
               className="w-full flex items-center justify-center"
               htmlType="button"
-              onClick={() => navigate("/auth/login")}
+              onClick={() => navigate(-1)}
               icon={
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={3}
                   stroke="currentColor"
-                  className="w-4 h-4"
+                  fill="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 19.5L8.25 12l7.5-7.5"
-                  />
+                    fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                  ></path>
                 </svg>
               }
             >
-              Return to Login
+              Go Back
             </Button>
           </Form.Item>
         </Form>
