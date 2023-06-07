@@ -23,24 +23,24 @@ const HomeSection = () => {
       <Element
         name="buy-crypto"
         id="header-section"
-        className=" h-[calc(100vh-64px)] pt-[64px] relative flex flex-col justify-center items-center bg-no-repeat bg-cover bg-center "
+        className="desktop: pt-[64px] relative flex flex-col flex-wrap justify-center items-center bg-no-repeat bg-cover bg-center "
         style={{
           backgroundImage: `url(${HeroBg})`,
         }}
       >
         <div
           className={
-            "grid grid-cols-12 flex items-center justify-center w-[1200px] mx-auto gap-x-[50px]"
+            "flex items-center justify-center  gap-x-[150px]"
           }
         >
           <div className={"col-span-6"}>
             <h1 className={"text-7xl text-[#fff]"}>
-              World's most secure wallet
+              World's most <br/> secure <br/> wallet
             </h1>
 
             <p className={"text-xl text-[#fff] my-[30px]"}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis
-              id egestas eu risus dignissim. Nunc, viverra volutpat nam
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/> Convallis
+              id egestas eu risus dignissim. Nunc, viverra <br/> volutpat nam
               sollicitudin.
             </p>
 

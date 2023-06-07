@@ -57,7 +57,7 @@ const Features = () => {
   return (
     <Element
       name="features"
-      className=" bg-opacity-20 h-[calc(250vh-64px)] relative flex flex-col justify-center items-center bg-[#fff] "
+      className=" bg-opacity-20 py-[100px] relative flex flex-col justify-center items-center bg-[#fff] "
     >
       <div className={' grid grid-cols-12 mb-[60px]'}>
 

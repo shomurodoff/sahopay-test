@@ -24,24 +24,20 @@ const TestimonialsSection = () => {
     return (
         <Element
             name="testimonials"
-            className=" h-[calc(250vh-64px)] relative flex flex-col   bg-[#fff] "
+            className="  relative flex flex-col   bg-[#fff] "
         >
             <div className={'grid grid-cols-12 '}>
                 <div className={'col-span-8 text-center mb-[50px]'}><h1 className={'text-5xl'}>What others say about us</h1></div>
 
             </div>
             {/*Swiping Images*/}
-            <div className={'mb-[100px]'}>
+            <div className={'mb-[100px] flex-wrap'}>
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={4}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
-                    navigation={{
-                        nextEl: ArrowRight,
-                        prevEl: ArrowLeft,
-                        clickable: true
-                    }}
+
 
                 >
                     <SwiperSlide>

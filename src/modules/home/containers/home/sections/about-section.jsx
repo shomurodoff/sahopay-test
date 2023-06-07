@@ -28,9 +28,9 @@ const AboutSection = ()=> {
     return(
         <Element
             name="about-us"
-            classname="bg-[#fff] h-[calc(150vh-64px)] relative flex flex-col gap-y-[100px] justify-center  items-center"
+            classname="bg-[#fff]  relative flex flex-col gap-y-[100px] justify-center  items-center"
         >
-            <div className={'flex flex-wrap justify-center gap-x-[200px] mt-[100px]'}>
+            <div className={'flex flex-wrap justify-center gap-x-[200px] pt-[200px]'}>
                 <div>
                     <h1 className={'text-5xl font-bold'}>Who we are</h1>
                     <p className={'text-base font-light my-[30px] text-gray-400'}>The London Wallet app was designed and developed in <br/> 2020 by a team of blockchain believers and crypto <br/> enthusiasts <br/><br/>
@@ -40,7 +40,7 @@ const AboutSection = ()=> {
                         Our main goal is to assist people in leveraging the power of <br/> cryptocurrency by investing in crypto assets with maximum <br/> security and simplicity
                     </p>
 
-                    <Button className={'hover:bg-purple-600 hover:text-[#fff] text-purple-600 border rounded-[40px] border-purple-600 px-[30px] h-[40px] '}>
+                    <Button className={'hover:bg-purple-600  text-purple-600 border rounded-[40px] hover:text-[#fff] border-purple-600 px-[30px] h-[40px] '}>
                         Try it Now
                     </Button>
 
