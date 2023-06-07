@@ -37,7 +37,16 @@ const TestimonialsSection = () => {
                     slidesPerView={4}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
-
+                    breakpoints={{
+                        478: {
+                            slidesPerView: 1,
+                            spaceBetween: 10
+                        },
+                        767: {
+                            slidesPerView: 2,
+                            spaceBetween: 5
+                        }
+                    }}
 
                 >
                     <SwiperSlide>
