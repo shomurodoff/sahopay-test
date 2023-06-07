@@ -1,5 +1,5 @@
 const config = {
-  API_ROOT: "http://localhost:8180/apisix/",
+  API_ROOT: "https://api.sahopay.com/api/",
   DEFAULT_APP_LANG: "ru",
 };
 

@@ -1,10 +1,45 @@
 import { LeftOutlined } from "@ant-design/icons";
-import { Form, Button, Checkbox, Input, Card, Row, Col } from "antd";
+import {
+  Form,
+  Button,
+  Checkbox,
+  Input,
+  Card,
+  Row,
+  Col,
+  notification,
+} from "antd";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { usePostQuery } from "../../../../hooks/api";
+import useAuth from "../../../../hooks/auth/useAuth";
+import { useStore } from "../../../../store";
+import { get } from "lodash";
 
 const Index = () => {
   const navigate = useNavigate();
+  const setAuth = useStore((state) => get(state, "setAuth", () => {}));
+  const setToken = useStore((state) => get(state, "setToken", () => {}));
+
+  const { mutate, isLoading } = usePostQuery({
+    listKeyId: "get-me",
+  });
+  const onSubmit = (data) => {
+    mutate(
+      { url: "authenticate", attributes: { ...data } },
+      {
+        onSuccess: (data) => {
+          console.log(data);
+          setAuth(true);
+          setToken(get(data, "token"));
+          notification.success("You are welcome!");
+        },
+        onError: (data) => {
+          notification.error("You password or username is wrong");
+        },
+      }
+    );
+  };
   return (
     <div className="flex-grow flex justify-center ">
       <Card className="w-11/12 md:w-1/4 shadow-2xl">
@@ -15,7 +50,7 @@ const Index = () => {
             remember: true,
           }}
           autoComplete="off"
-          onFinish={() => {}}
+          onFinish={onSubmit}
         >
           <div className="text-center mb-5">
             <h2 className="text-2xl font-bold">Sign to SahoPay</h2>
@@ -28,7 +63,7 @@ const Index = () => {
           </div>
           <Form.Item
             label="Email"
-            name="email"
+            name="username"
             rules={[
               {
                 required: true,
@@ -50,7 +85,7 @@ const Index = () => {
           >
             <Input.Password />
           </Form.Item>
-          <Form.Item name="remember" valuePropName="checked">
+          <Form.Item name="rememberMe" valuePropName="checked">
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
           <Form.Item>
